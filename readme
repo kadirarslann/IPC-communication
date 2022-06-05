@@ -1,0 +1,12 @@
+client 1234 key sahip mailbox üzerinden servera mesja gönderir
+
+server 123235 key sahip olan mailbox üzerinden clientlara gerekli bilgiyi gönderir
+
+shared carpılacak matrixlerin boyutu +2 dir. +2 size client ile worker rhreadin aynı anda okuma yazma gibi durumlarını engelemek için koyulmuştur
+
+
+gcc -o myclient myclient.c && ./myclient dosya5.txt dosya6.txt -->>>> şeklindfe client çalıştırılır. 1. paramatere ilk matrixin oldugu dosta 2. parametre 2. matrixin oldugu dosyadır
+
+gcc -pthread -o myserver myserver.c && ./myserver  --->>>>> şeklinde server çalıştırılır
+
+waiterAtqueue değişkeni servere bir mesaj  gelip gelmedigin kontrol etmek içişn kullanılan bir ara değişkendir.
